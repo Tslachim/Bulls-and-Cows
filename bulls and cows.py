@@ -30,6 +30,8 @@ for i in range(0,4):
 
 while generated[0] == 0:
     generated[0] == random.choice(numbers)
+ 
+start_time = time()
 
 # uživatel zadá čtyřčíselné číslo number = input("")
     # pokud bude kratší, nebo delší upozorní ho a nechá ho to vypsat znova
@@ -37,8 +39,6 @@ while generated[0] == 0:
     # elif len(number) < 4: print je kratší 
     # číslo nesmí začínat 0 
     # číslo nesmí být duplicitní
-print(generated)
-start_time = time()
 while end:
     while len(number := input("Enter a four-digit number:\n")) != 4 or not number.isnumeric() or int(number[0]) == 0 or len(set(number)) < 4:
         if len(number) > 4:
@@ -57,7 +57,6 @@ while end:
 
     # vytvořit promněné na Cows and Bulls 
     # pokud je uživatelské číslo v generated pak cows, pokud je se stejným indexem tak bull přes funkci for?
-
     for num in range(0,4):
         if int(number[num]) == generated[num]:
             bull += 1
@@ -68,8 +67,8 @@ while end:
     print(20 * "-")
     print(f"{bull} Bull") if bull <= 1 else print(f"{bull} Bulls"), print(f"{cow} Cow") if cow <= 1 else print(f"{cow} Cows")
     print(20 * "-")
-    # v případě uspěšného uhádnutí ukončit cyklus!
 
+    # v případě uspěšného uhádnutí ukončit cyklus!
     if bull == 4:
         end = False
         stop_time = time()
@@ -77,7 +76,7 @@ while end:
     # vymazat hodnoty bull and cow aby počítání neovlivnilo další kolo 
     bull = 0
     cow = 0
-    
+
 game_time = round(stop_time - start_time, 1)
 
 print(f"""You find all numbers, You win!
