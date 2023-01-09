@@ -1,1 +1,1 @@
-# Bulls-and-Cows
+# Bulls-and-Cows project Engeto academy
