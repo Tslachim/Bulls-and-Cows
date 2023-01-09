@@ -14,8 +14,6 @@ Let's play a bulls and cows game.
 -----------------------------------------------
 """)
 
-# nahodné vygenerování čtyřciferného čísla, které nesmí začínat nulou
-
 numbers = [0,1,2,3,4,5,6,7,9,]
 generated = []
 end = True
@@ -23,6 +21,7 @@ bull = 0
 cow = 0
 attemp = 0
 
+# nahodné vygenerování čtyřciferného čísla, které nesmí začínat nulou
 for i in range(0,4):
     num = random.choice(numbers)
     generated.append(num)
@@ -42,21 +41,21 @@ start_time = time()
 while end:
     while len(number := input("Enter a four-digit number:\n")) != 4 or not number.isnumeric() or int(number[0]) == 0 or len(set(number)) < 4:
         if len(number) > 4:
-            print("Your number is too long. Write four-digit number!")
+            print("Your number is too long. Write four-digit number!\n")
         elif len(number) < 4:
-            print("Your number is too short. Write four-digit number!")
+            print("Your number is too short. Write four-digit number!\n")
         elif not number.isnumeric():
-            print("Your choice is not number. Try again!")
+            print("Your choice is not number. Try again!\n")
         elif int(number[0]) == 0:
-            print("Number must not start with 0")
+            print("Number must not start with 0\n")
         elif len(set(number)) != 4:
-            print("Numbers must be unique!")
+            print("Numbers must be unique!\n")
 
     # počitadlo kolikrát je potřeba zadávat (správné) číslo 
     attemp += 1
 
     # vytvořit promněné na Cows and Bulls 
-    # pokud je uživatelské číslo v generated pak cows, pokud je se stejným indexem tak bull přes funkci for?
+    # pokud je uživatelské číslo v generated pak cows, pokud je se stejným indexem tak bull přes funkci for
     for num in range(0,4):
         if int(number[num]) == generated[num]:
             bull += 1
