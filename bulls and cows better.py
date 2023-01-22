@@ -1,9 +1,3 @@
-"""
-projekt_2.py: druhý projekt do Engeto Online Python Akademie
-author: Michal Stuchlík 
-email: tslachim@gmail.com
-discord: Mišakus#17,63
-"""
 import random
 from time import time
 from tkinter import *
