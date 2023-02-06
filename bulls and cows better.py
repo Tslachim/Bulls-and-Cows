@@ -1,3 +1,5 @@
+# Kód zatím není funkční, je v procesu předělávání 
+
 import random
 from time import time
 from tkinter import *
@@ -151,4 +153,4 @@ end_label = Label(text_frame, font= ("Arial", 10, "bold"), bg= main_color, fg="#
 end_label.grid(row=0, column= 2)
 
 
-window.mainloop()
+window.mainloop() 
