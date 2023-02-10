@@ -3,6 +3,7 @@ projekt_2.py: druhý projekt do Engeto Online Python Akademie
 author: Michal Stuchlík 
 email: tslachim@gmail.com
 discord: Mišakus#1763
+Hra funguje v prostředí terminálu, verze 2.0 funguje v Okně
 """
 import random
 from time import time
